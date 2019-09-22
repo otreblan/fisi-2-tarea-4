@@ -147,6 +147,67 @@ Y son desviados por el campo magnético terrestre.
 	\end{center}
 \end{figure}
 
+\begin{enumerate}[label=\alph*.]
+	\item
+		\begin{align*}
+			0.95m &= \frac{2*10^{-26}kg|\vec{v}|}{|4.80*10^{-19}C|*0.25T}\\
+			|\vec{v}| &= \frac{0.95*4.80*0.25*10^7}{2} \frac{m}{s}\\
+			\Aboxed
+			{
+				|\vec{v}| &= 57*10^5 \frac{m}{s}
+			}
+		\end{align*}
+		\begin{align*}
+			\vec{F}_x &> 0\\
+			\\
+			\vec{F} &= q(\vec{v}\times\vec{B})\\
+			\vec{F} &= q
+			\begin{pmatrix}
+				0 & -57 & 0\\
+				0 & 0 & 0.25
+			\end{pmatrix}
+			10^5\\
+			\vec{F} &= q(
+				-14.25\hat{\imath}
+				+0\hat{\jmath}
+				+0\hat{k}
+			)10^5\\
+			\\
+			\vec{F}_x &= -14.25q*10^5\\
+			\cancel{-14.25}q*\cancel{10^5} &> 0\\
+			\Aboxed
+			{
+				q &< 0
+			}
+		\end{align*}
+	\item
+		\begin{align*}
+			\intertext{Fuerza del campo magnético:}
+			\vec{F}_M &= -4.80*10^{-19}C
+			\begin{pmatrix}
+				0 & -57 & 0\\
+				0 & 0 & 0.25
+			\end{pmatrix}
+			10^5 \frac{m}{s} T\\
+			\vec{F}_M &= -4.80*10^{-19}C
+			(
+				-14.25\hat{\imath}
+				+0\hat{\jmath}
+				+0\hat{k}
+			)10^5N\\
+			\vec{F}_M &= 68.4*10^{-14}N\hat{\imath}
+			\intertext{Fuerza de gravedad}
+			\vec{F}_G &= ma_G\\
+			\vec{F}_G &= 2*10^{-26}kg*10 \frac{m}{s^2}(-\hat{\jmath})\\
+			\vec{F}_G &= -2*10^{-25}N\hat{\jmath}
+			\intertext{Proporción}
+			\frac{|\vec{F}_G|}{|\vec{F}_M|}*100\% &= \frac{2*10^{-23}}{68.4*10^{-14}}\%
+			= 2.92*10^{-11}\%
+			\boxed{\text{Sí}}
+		\end{align*}
+	\item Es la misma porque la fuerza magnética solo cambia la dirección.
+\end{enumerate}
+
 \textbf{
 	Determina la trayectoria a seguir de las partículas cargadas para cada uno
 	de los siguientes casos:
