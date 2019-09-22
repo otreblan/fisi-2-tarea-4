@@ -4,10 +4,137 @@
 % Aquí empieza el documento{{{
 \begin{document}
 
-\maketitle
+%\maketitle
 \thispagestyle{fancy}
 
-<++>
+\textbf{Alberto Oporto Ames \#139}
 
+\section*{Preguntas}%
+
+\textbf{¿Una partícula cargada puede moverse a través de una campo magnético
+sin experimentar fuerza alguna?
+¿Y el diamagnetismo?}
+
+\textbf{¿Por qué una brújula apunta hacia el polo norte geográfico?}
+
+\textbf{¿Qué son los viento solares?
+¿Por qué son peligrosos, y cómo son afectados por el campo magnético
+terrestre?}
+
+\section*{Problemas}%
+
+\textbf{
+	Una partícula con carga de $\mathbf{-1.24*10^{-8}C}$ se mueve con velocidad instantánea
+	$\mathbf{v=(4.19\hat{\imath}-3.85\hat{\jmath})*10^4 \frac{m}{s} }$.
+	Determina la fuerza magnética ejercida por un campo magnético $\mathbf{B}$ para:
+}
+\begin{enumerate}[label=\alph*.]
+	\item $B=1.9\hat{\imath}mT$
+	\item $B=1.9\hat{\jmath}mT$
+	\item $B=(0.8;1.3;-1.1)mT$
+\end{enumerate}
+
+\textbf{
+	En una experimento con rayos cósmicos, un haz vertical de partículas que tienen
+	carga de magnitud $\mathbf{3e}$, y mas de $\mathbf{12}$ veces la masa del protón,
+	entra a un campo magnético uniforme y horizontal de $\mathbf{0.25T}$ y es doblado
+	en un semicírculo de $\mathbf{95cm}$ de diámetro, como se indica en la figura.
+}
+\begin{enumerate}[label=\alph*.]
+	\item Encontrar la rapidez de las partículas y el signo de su carga.
+	\item ¿Es razonable ignorar la fuerza de gravedad sobre las partículas?
+	\item ¿Cómo se compara la rapidez de las partículas al entrar al campo con
+		la rapidez que tienen al salir del campo?
+\end{enumerate}
+
+\textbf{
+	Determina la trayectoria a seguir de las partículas cargadas para cada uno
+	de los siguientes casos:
+}
+\begin{enumerate}[label=\alph*)]
+	\item
+		\tikzset
+		{
+			flecha/.pic=
+			{
+				\draw [arrows = {-Latex[width=10pt , length=10pt]},
+					line width=3.5pt,
+					red
+					] (0,0) -- +(2.5,0);
+			}
+		}
+		\begin{figure}[H]
+			\begin{center}
+				\begin{tikzpicture}[scale=0.5, transform shape]
+					\draw[dashed] (0,0) rectangle (5,5);
+					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ adentro};
+					\foreach \x in {1, ..., 4}
+					{
+						\foreach \y in {1, ..., 4}
+						{
+							\foreach \angl in {45, 135, 225, 315}
+							{
+								\draw[color=green] (\x,\y) -- +(\angl: 0.25);
+							}
+						}
+					}
+					\draw (-2,2.5) pic {flecha};
+					\shade [ball color=git] (-2,2.5) circle (0.5cm);
+					\draw (-2,3.5) node {\Huge$+$};
+				\end{tikzpicture}
+			\end{center}
+		\end{figure}
+	\item
+		\begin{figure}[H]
+			\begin{center}
+				\begin{tikzpicture}[scale=0.5, transform shape]
+					\draw[dashed] (0,0) rectangle (5,5);
+					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ arriba};
+					\draw (7,2.5) pic [xscale=-1] {flecha};
+					\shade [ball color=arch] (7,2.5) circle (0.5cm);
+					\draw (7.2,3.5) node {\Huge$-$};
+					\foreach \x in {1,...,4}
+					{
+						\draw [color=green, -Latex] (\x,1) -- +(0,3);
+					}
+				\end{tikzpicture}
+			\end{center}
+		\end{figure}
+	\item
+		\begin{figure}[H]
+			\begin{center}
+				\begin{tikzpicture}[scale=0.5, transform shape]
+					\draw[dashed] (0,0) rectangle (5,5);
+					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ derecha};
+					\draw (7,2.5) pic [xscale=-1] {flecha};
+					\shade [ball color=git] (7,2.5) circle (0.5cm);
+					\draw (7.2,3.5) node {\Huge$+$};
+					\foreach \y in {1,...,4}
+					{
+						\draw [color=green, -Latex] (1,\y) -- +(3,0);
+					}
+				\end{tikzpicture}
+			\end{center}
+		\end{figure}
+	\item
+		\begin{figure}[H]
+			\begin{center}
+				\begin{tikzpicture}[scale=0.5, transform shape]
+					\draw[dashed] (0,0) rectangle (5,5);
+					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ a $\mathbf{45°}$};
+					\draw[dotted] (2.5,0) -- (2.5,5);
+					\draw (2.5,-2) pic [rotate=90] {flecha};
+					\shade [ball color=git] (2.5,-2) circle (0.5cm);
+					\draw (3.5,-2) node {\Huge$+$};
+
+					\draw [color=green, -Latex] (1,3) -- +(1,1);
+					\draw [color=green, -Latex] (1,2) -- +(2,2);
+					\draw [color=green, -Latex] (1,1) -- +(3,3);
+					\draw [color=green, -Latex] (2,1) -- +(2,2);
+					\draw [color=green, -Latex] (3,1) -- +(1,1);
+				\end{tikzpicture}
+			\end{center}
+		\end{figure}
+\end{enumerate}
 \end{document}
 %}}}
