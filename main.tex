@@ -122,6 +122,30 @@ Y son desviados por el campo magnético terrestre.
 	\item ¿Cómo se compara la rapidez de las partículas al entrar al campo con
 		la rapidez que tienen al salir del campo?
 \end{enumerate}
+\begin{figure}[H]
+	\begin{center}
+		\begin{tikzpicture}[scale=1, transform shape]
+			\foreach \x in {1, ..., 5}
+			{
+				\foreach \y in {1, ..., 3}
+				{
+					\filldraw [arch](\x,\y) circle (0.07cm);
+				}
+			}
+			\draw (6, 2) node {{ \boldmath$\overrightarrow{B}$ }};
+
+			\draw [arch, dashed, ultra thick, -{>[width=8pt]}](2.5,4) -- +(0,-1);
+			\draw [arch, dashed, ultra thick, -{>[width=8pt]}](2.5,3) arc
+			[
+				start angle=180,
+				end angle=360,
+				radius=1
+			];
+			\draw [<->|](2.5, 3.5) -- +(2,0);
+			\draw (3.5, 3.75) node {$95.0cm$};
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
 
 \textbf{
 	Determina la trayectoria a seguir de las partículas cargadas para cada uno
