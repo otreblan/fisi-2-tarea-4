@@ -1,4 +1,4 @@
-\documentclass[12pt, twoside]{article}
+\documentclass[10pt, twoside]{article}
 \usepackage{main}
 
 % Aquí empieza el documento{{{
@@ -15,18 +15,26 @@
 sin experimentar fuerza alguna?
 ¿Y el diamagnetismo?}
 
+No. Tampoco (Pero la fuerza estará en sentido contrario).
+
 \textbf{¿Por qué una brújula apunta hacia el polo norte geográfico?}
 
-\textbf{¿Qué son los viento solares?
+Porque es un imán y los imanes se alinean a los campo magnéticos.
+
+\textbf{¿Qué son los vientos solares?
 ¿Por qué son peligrosos, y cómo son afectados por el campo magnético
 terrestre?}
 
-\section*{Problemas}%
+Plasma del sol.
+Porque pueden hacer que las computadoras dejen de funcionar.
+Y son desviados por el campo magnético terrestre.
 
+\section*{Problemas}%
 \textbf{
-	Una partícula con carga de $\mathbf{-1.24*10^{-8}C}$ se mueve con velocidad instantánea
-	$\mathbf{v=(4.19\hat{\imath}-3.85\hat{\jmath})*10^4 \frac{m}{s} }$.
-	Determina la fuerza magnética ejercida por un campo magnético $\mathbf{B}$ para:
+	\boldmath
+	Una partícula con carga de $-1.24*10^{-8}C$ se mueve con velocidad instantánea
+	$\allowbreak v=(4.19\hat{\imath}-3.85\hat{\jmath})*10^4 \frac{m}{s}$.
+	Determina la fuerza magnética ejercida por un campo magnético $B$ para:
 }
 \begin{enumerate}[label=\alph*.]
 	\item $B=1.9\hat{\imath}mT$
@@ -34,11 +42,79 @@ terrestre?}
 	\item $B=(0.8;1.3;-1.1)mT$
 \end{enumerate}
 
+\begin{align*}
+	\vec{F} &= q(\vec{v}\times\vec{B})
+\end{align*}
+
+\begin{enumerate}[label=\alph*.]
+	\item
+		\begin{align*}
+			\vec{F} &= -1.24*10^{-8}C*
+			\begin{pmatrix}
+				4.19 & -3.85 & 0 \\
+				1.9 & 0 & 0
+			\end{pmatrix}
+			*10^4 \frac{m}{s} *10^{-3}T\\
+			\vec{F} &= -1.24*10^{-7}N
+			(
+				(0-0)\hat{\imath}
+				+(0-0)\hat{\jmath}
+				+(0-(-3.85*1.9))\hat{k}
+			)\\
+			\vec{F} &\approx -9.07*10^{-7}N\hat{k}
+		\end{align*}
+	\item
+		\begin{align*}
+			\vec{F} &= -1.24*10^{-8}C*
+			\begin{pmatrix}
+				4.19 & -3.85 & 0 \\
+				0 & 1.9 & 0
+			\end{pmatrix}
+			*10^4 \frac{m}{s} *10^{-3}T\\
+			\vec{F} &= -1.24*10^{-7}N
+			(
+				(0-0)\hat{\imath}
+				+(0-0)\hat{\jmath}
+				+((4.19*1.9)-0)\hat{k}
+			)\\
+			\vec{F} &\approx -9.87*10^{-7}N\hat{k}
+		\end{align*}
+	\item
+		\begin{align*}
+				\vec{F} &= -1.24*10^{-8}C*
+			\begin{pmatrix}
+				4.19 & -3.85 & 0 \\
+				0.8 & 1.3 & -1.1
+			\end{pmatrix}
+			*10^4 \frac{m}{s} *10^{-3}T\\
+			\vec{F} &\approx -1.24*10^{-7}N
+			(
+				(4.24-0)\hat{\imath}
+				+(0+4.60)\hat{\jmath}
+				+(5.45+3.08)\hat{k}
+			)\\
+			\vec{F} &\approx -1.24*10^{-7}N
+			(
+				4.24\hat{\imath}
+				+4.60\hat{\jmath}
+				+8.53\hat{k}
+			)\\
+			\vec{F} &\approx
+			(
+				-5.26\hat{\imath}
+				-5.70\hat{\jmath}
+				-10.58\hat{k}
+			)
+			*10^{-7}N
+		\end{align*}
+\end{enumerate}
+
 \textbf{
+	\boldmath
 	En una experimento con rayos cósmicos, un haz vertical de partículas que tienen
-	carga de magnitud $\mathbf{3e}$, y mas de $\mathbf{12}$ veces la masa del protón,
-	entra a un campo magnético uniforme y horizontal de $\mathbf{0.25T}$ y es doblado
-	en un semicírculo de $\mathbf{95cm}$ de diámetro, como se indica en la figura.
+	carga de magnitud $3e$, y mas de $12$ veces la masa del protón,
+	entra a un campo magnético uniforme y horizontal de $0.25T$ y es doblado
+	en un semicírculo de $95cm$ de diámetro, como se indica en la figura.
 }
 \begin{enumerate}[label=\alph*.]
 	\item Encontrar la rapidez de las partículas y el signo de su carga.
