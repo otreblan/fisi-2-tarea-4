@@ -15,7 +15,8 @@
 sin experimentar fuerza alguna?
 ¿Y el diamagnetismo?}
 
-No. Tampoco (Pero la fuerza estará en sentido contrario).
+Sí, cuando va en la misma dirección que el campo magnético.
+También.
 
 \textbf{¿Por qué una brújula apunta hacia el polo norte geográfico?}
 
@@ -111,7 +112,7 @@ Y son desviados por el campo magnético terrestre.
 
 \textbf{
 	\boldmath
-	En una experimento con rayos cósmicos, un haz vertical de partículas que tienen
+	En un experimento con rayos cósmicos, un haz vertical de partículas que tienen
 	carga de magnitud $3e$, y mas de $12$ veces la masa del protón,
 	entra a un campo magnético uniforme y horizontal de $0.25T$ y es doblado
 	en un semicírculo de $95cm$ de diámetro, como se indica en la figura.
@@ -239,6 +240,12 @@ Y son desviados por el campo magnético terrestre.
 							}
 						}
 					}
+					\draw [arch, dashed, ultra thick, -{>[width=8pt]}](0,2.5) arc
+					[
+						start angle=90,
+						end angle=-0,
+						radius=2
+					];
 					\draw (-2,2.5) pic {flecha};
 					\shade [ball color=git] (-2,2.5) circle (0.5cm);
 					\draw (-2,3.5) node {\Huge$+$};
@@ -252,6 +259,8 @@ Y son desviados por el campo magnético terrestre.
 					\draw[dashed] (0,0) rectangle (5,5);
 					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ arriba};
 					\draw (7,2.5) pic [xscale=-1] {flecha};
+					\draw [arch, dashed, ultra thick, -{>[width=8pt]}] (5,2.5) -- +(-2.5,0);
+					\draw [arch, dashed, ultra thick, -{>[width=8pt]}] (0,2.5) -- +(2.5,0);
 					\shade [ball color=arch] (7,2.5) circle (0.5cm);
 					\draw (7.2,3.5) node {\Huge$-$};
 					\foreach \x in {1,...,4}
@@ -267,6 +276,7 @@ Y son desviados por el campo magnético terrestre.
 				\begin{tikzpicture}[scale=0.5, transform shape]
 					\draw[dashed] (0,0) rectangle (5,5);
 					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ derecha};
+					\draw [arch, dashed, ultra thick, -{>[width=8pt]}] (5,2.5) -- +(-5,0);
 					\draw (7,2.5) pic [xscale=-1] {flecha};
 					\shade [ball color=git] (7,2.5) circle (0.5cm);
 					\draw (7.2,3.5) node {\Huge$+$};
@@ -278,12 +288,25 @@ Y son desviados por el campo magnético terrestre.
 			\end{center}
 		\end{figure}
 	\item
+		\tikzset
+		{
+			loop/.pic=
+			{
+				\draw[ultra thick, arch, dashed] (0,0) .. controls (1,2) and (1,-1) .. (0,1);
+			}
+		}
 		\begin{figure}[H]
 			\begin{center}
 				\begin{tikzpicture}[scale=0.5, transform shape]
 					\draw[dashed] (0,0) rectangle (5,5);
 					\draw (2.5,5.6) node {\bfseries\Huge$\overrightarrow{\mathbf{B}}$ a $\mathbf{45°}$};
 					\draw[dotted] (2.5,0) -- (2.5,5);
+
+					\foreach \y in {0, ..., 4}
+					{
+						\draw (2.5,\y) pic [->] {loop};
+					}
+
 					\draw (2.5,-2) pic [rotate=90] {flecha};
 					\shade [ball color=git] (2.5,-2) circle (0.5cm);
 					\draw (3.5,-2) node {\Huge$+$};
@@ -297,5 +320,7 @@ Y son desviados por el campo magnético terrestre.
 			\end{center}
 		\end{figure}
 \end{enumerate}
+\vfill
+Código fuente: \url{https://github.com/otreblan/fisi-2-tarea-4}
 \end{document}
 %}}}
