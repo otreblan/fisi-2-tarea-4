@@ -40,7 +40,11 @@
 \usetikzlibrary{arrows.meta}
 % Sin esto las flechas no funcionan
 \usetikzlibrary{babel}
-\tikzexternalize[prefix=tikz/]
+
+% Esto crea un caché para las imágenes de tikz (depende del paquete svg)
+\newcommand{\tikzprefix}{tikz/}
+\svg@shell@mkdir{\tikzprefix}
+\tikzexternalize[prefix=\tikzprefix]
 %}}}
 % Colores de los links {{{
 \definecolor{white}{HTML}{FFFFFF}
